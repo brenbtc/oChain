@@ -35,5 +35,5 @@ const cryptoSchema = new Schema(
     }
 )
 
-const Crypto = mongoose.model('User', cryptoSchema);
+const Crypto = mongoose.model('Crypto', cryptoSchema);
 module.exports = Crypto;
