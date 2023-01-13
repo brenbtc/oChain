@@ -28,7 +28,7 @@ function Crypto() {
                 <tr key={coin.id}>
                     <td>{coin.name}</td>
                     <td>{coin.symbol}</td>
-                    <td>{coin.price_usd}</td>
+                    <td>{coin.price}</td>
                 </tr>
                 ))}
             </tbody>

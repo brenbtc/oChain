@@ -1,6 +1,6 @@
 import './show-crypto.css'
 
-function NFT() {
+function ShowCrypto(props) {
 
 
     return (
