@@ -33,6 +33,11 @@ function Home() {
 
     return (
         <div>
+
+            <button>
+            <a role='button' href='/signup'>Get Started</a>
+            </button>
+
             <h1>DISCOVER THE PERFECT WATCHLIST</h1>
             <h2>PLAN YOUR TRADE.</h2>
             <h2>TRADE YOUR PLAN.</h2>

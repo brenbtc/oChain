@@ -1,12 +1,19 @@
 import axios from "axios";
-//create a note
-export async function createNote(formData) {
-console.log(formData)
-const { data } = await axios.post( "http://localhost:5000/Note",formData);
-      return data;
- }
- //show a note 
- export async function showNote() {
-    const { data } = await axios.get("http://localhost:5000/note");
-    return data;
-  }
+
+// Sign Up \\
+export async function signUp(formData) {
+  const { data } = await axios.post(
+    'user/signup',
+    formData
+  )
+  return data;
+}
+
+
+export async function accountLogin(formData) {
+  const { data } = await axios.post(
+    'user/login',
+    formData
+  )
+  return data
+}
