@@ -14,7 +14,7 @@ const app = express();
 const userCtrl = require('./controllers/users');
 const noteCtrl = require('./controllers/notes');
 // const nftCtrl = require('./controllers/nfts');
-// const cryptoCtrl = require('./controllers/cryptos');
+const cryptoCtrl = require('./controllers/cryptos');
 
 
 
@@ -28,8 +28,8 @@ app.use(methodOverride('_method'))
 // Controllers (Routes) \\
 app.use('/user', userCtrl);
 app.use('/note', noteCtrl);
-// app.use('/cryptos', cryptoCtrl);
-// app.use('/nfts', nftCtrl);
+app.use('/crypto', cryptoCtrl);
+// app.use('/nft', nftCtrl);
 
 
 

@@ -28,5 +28,5 @@ mongoose.connection.on('error', (error) => {
 // module.exports.Nft = require("./nft.js");
 module.exports.User = require("./user.js");
 module.exports.Note = require("./note.js");
-// module.exports.Crypto = require("./crypto.js");
+module.exports.Crypto = require("./crypto.js");
 

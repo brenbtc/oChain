@@ -5,10 +5,10 @@ function ShowCrypto(props) {
 
     return (
         <div>
-        <h1>DISCOVER {crypto.name}</h1>
+        <h1>DISCOVER  jfjbrfe</h1>
         
         </div>
     )
 }
 
-export default NFT
+export default ShowCrypto

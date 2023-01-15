@@ -12,7 +12,11 @@ import Signup from './components/Signup/signup';
 
 // Pages \\
 import Home from "./Pages/Home";
-
+import About from './Pages/About/about';
+import Crypto from './Pages/Crypto/dis-crypto'
+import NFT from './Pages/NFT/dis-nft'
+import ShowCrypto from './Pages/ShowCrypto/show-crypto'
+import Watchlist from './Pages/Watchlist/watchlist'
 
 function App() {
 
@@ -48,8 +52,30 @@ function App() {
           />
 
           <Route 
-
+          path='/about'
+          element={<About />}
           />
+
+          <Route 
+          path='/crypto'
+          element={<Crypto />}
+          />
+
+          <Route 
+          path='/nft'
+          element={<NFT />}
+          />
+
+          <Route 
+          path='/crypto/crypto'
+          element={<ShowCrypto />}
+          />
+
+          <Route 
+          path='/watchlist'
+          element={<Watchlist />}
+          />
+          
         </Routes>
       </main>
     </>

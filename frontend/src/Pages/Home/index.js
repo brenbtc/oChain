@@ -38,9 +38,24 @@ function Home() {
             <a role='button' href='/signup'>Get Started</a>
             </button>
 
-            <h1>DISCOVER THE PERFECT WATCHLIST</h1>
+            <h2>DISCOVER THE PERFECT WATCHLIST</h2>
             <h2>PLAN YOUR TRADE.</h2>
             <h2>TRADE YOUR PLAN.</h2>
+
+            <ul>
+                <li>
+                    <a href='/crypto'>Crypto</a>
+                </li>
+
+                <li>
+                    <a href='/nfts'>NFTs</a>
+                </li>
+
+                <li>
+                    <a href='/about'>About</a>
+                </li>
+            </ul>
+
 
         </div>
     )

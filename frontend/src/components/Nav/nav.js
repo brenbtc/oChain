@@ -38,12 +38,17 @@ function Nav(props) {
       setNavItems(
         initialState.concat([
 
+          <button>
           <li className="nav-item" key="3">
             <Link className='nav-link' to="/login">Login</Link>
-          </li>,
+          </li>
+          </button>,
+          
+          <button>
           <li className="nav-item" key="4">
             <Link className='nav-link' to="/signup">Signup</Link>
-          </li>,
+          </li>
+          </button>,
         ])
       );
     }
