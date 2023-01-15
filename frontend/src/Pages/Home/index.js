@@ -1,35 +1,20 @@
 import { useState } from 'react'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom'
+import Typography from '@mui/material/Typography';
+
+
 
 import './home.css'
 
 function Home() {
 
-    const items = [
-        {
-            id: 1,
-            image: '../../public/astoock.jpeg',
-            title: 'Crypto',
-            description: 'The ultimate cryptocurrency directory. Keep an eye on your crypto. Plan your next trade.',
-            route: '/Crypto'
-        },
-        {
-            id: 2,
-            image: '../../public/ape.jpeg',
-            title: 'NFTs',
-            description: 'The ultimate NFT directory. Track your favorite NFTs.',
-            route: '/NFT'
-        },
-        {
-            id: 3,
-            image: '../../public/aboot.jpeg',
-            title: 'About',
-            description: 'Come learn more about the company.',
-            route: '/About'
-        }
-    ];
-    
+    const cards = [1, 2, 3];
 
-    const [index, setIndex] = useState(0);
 
     return (
         <div>
@@ -55,10 +40,12 @@ function Home() {
                     <a href='/about'>About</a>
                 </li>
             </ul>
-
-
+    
         </div>
     )
 }
+
+
+
 
 export default Home

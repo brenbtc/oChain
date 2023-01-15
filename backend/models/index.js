@@ -25,7 +25,7 @@ mongoose.connection.on('error', (error) => {
 
 
 // Accessing Models \\
-// module.exports.Nft = require("./nft.js");
+module.exports.Nft = require("./nft.js");
 module.exports.User = require("./user.js");
 module.exports.Note = require("./note.js");
 module.exports.Crypto = require("./crypto.js");

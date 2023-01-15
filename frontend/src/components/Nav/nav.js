@@ -22,8 +22,6 @@ function Nav(props) {
     if (props.loggedIn) {
       setNavItems(
         initialState.concat(
-
-
           <li>
             <Link to="/watchlist">Watchlist</Link>
           </li>,
@@ -37,7 +35,6 @@ function Nav(props) {
     } else {
       setNavItems(
         initialState.concat([
-
           <button>
           <li className="nav-item" key="3">
             <Link className='nav-link' to="/login">Login</Link>
@@ -52,7 +49,7 @@ function Nav(props) {
         ])
       );
     }
-  }, [props.isLoggedIn])
+  }, [props.loggedIn])
 
     return (
         <div>

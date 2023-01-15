@@ -27,7 +27,7 @@ function Signup(props) {
             props.setLoggedIn(true)
             props.setUser(data.user)
         })
-        navigate('/')
+        navigate('/login')
     }
 
     return (

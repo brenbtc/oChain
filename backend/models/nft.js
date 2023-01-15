@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+// const Schema = mongoose.Schema
 
-const nftSchema = new Schema(
+const nftSchema = new mongoose.Schema(
     {
-        collection: {
+        cluster: {
             type: String,
             required: true
         },
