@@ -17,6 +17,7 @@ import Crypto from './Pages/Crypto/dis-crypto'
 import NFT from './Pages/NFT/dis-nft'
 import ShowCrypto from './Pages/ShowCrypto/show-crypto'
 import Watchlist from './Pages/Watchlist/watchlist'
+import Test from './Pages/Test/test';
 
 function App() {
 
@@ -76,6 +77,12 @@ function App() {
           element={<Watchlist />}
           />
           
+
+          <Route 
+          path='/test'
+          element={<Test />}
+          />
+
         </Routes>
       </main>
     </>

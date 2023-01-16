@@ -1,10 +1,4 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import { Typography } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 
 import { useState } from 'react';
@@ -15,7 +9,6 @@ import {accountLogin } from '../../utils/api'
 
 import './login.css'
 
-const theme = createTheme();
 
 function Login(props) {
     const navigate = useNavigate();

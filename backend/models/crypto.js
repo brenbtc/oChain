@@ -30,7 +30,11 @@ const cryptoSchema = new Schema(
 
         volume: {
             type:Number
-        }
+        },
+        note_id: [{
+            type: mongoose.ObjectId,
+            ref: 'Note'
+        }]
 
     }
 )

@@ -20,7 +20,11 @@ const nftSchema = new mongoose.Schema(
 
         floor: {
             type: Number,
-        }
+        },
+        note_id: [{
+            type: mongoose.ObjectId,
+            ref: 'Note'
+        }]
 
     }
 )

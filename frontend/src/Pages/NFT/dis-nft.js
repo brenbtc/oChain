@@ -5,8 +5,8 @@ function NFT() {
     // const [nfts, setNfts] = useState([]);
 
     return (
-        <div>
-            <h1>DISCOVER NFTs</h1>
+        <div className='nft-page'>
+            <h2>DISCOVER NFTs</h2>
             {/* <div>
             {nfts.map(nft => (
                 <div key={nft.id}>

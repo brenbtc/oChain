@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { AppBar, Toolbar } from '@mui/material'
 
 import './nav.css'
 
 function Nav(props) {
 
     const navigate = useNavigate();
-    const initialState = [<h1><Link to='/'>oChain</Link></h1>]
+    const initialState = [<h1><Link to='/'className='brand-logo' >oChain</Link></h1>]
 
     const handleLogOut = () => {
         localStorage.clear();
@@ -35,24 +35,21 @@ function Nav(props) {
     } else {
       setNavItems(
         initialState.concat([
-          <button>
           <li className="nav-item" key="3">
             <Link className='nav-link' to="/login">Login</Link>
-          </li>
-          </button>,
+          </li>,
           
-          <button>
+        
           <li className="nav-item" key="4">
             <Link className='nav-link' to="/signup">Signup</Link>
-          </li>
-          </button>,
+          </li>,
         ])
       );
     }
   }, [props.loggedIn])
 
     return (
-        <div>
+        <div className='nav-wrapper'>
             <ul>
                 {navItems}
             </ul>

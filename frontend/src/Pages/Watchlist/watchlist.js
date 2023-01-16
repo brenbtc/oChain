@@ -4,7 +4,7 @@ function Watchlist() {
 
 
     return (
-        <div>
+        <div className='watchlist-page'>
         <h1>MY WATCHLIST</h1>
         
         </div>

@@ -4,7 +4,7 @@ function ShowCrypto(props) {
 
 
     return (
-        <div>
+        <div className='crypto-id-page'>
         <h1>DISCOVER  jfjbrfe</h1>
         
         </div>

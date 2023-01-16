@@ -4,7 +4,7 @@ function About() {
 
 
     return (
-        <div>
+        <div className='about-page'>
         <h1>About oChain</h1>
         
         </div>
