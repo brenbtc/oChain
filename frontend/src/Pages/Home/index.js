@@ -16,7 +16,7 @@ function Home() {
         <main className="home-page">
             <div className="row">
             {cards.map((card) => (
-                <div key={card.id} className="col s3 m3">
+                <div key={card.id} className="col">
                     <a href={card.link}>
                     <div className="card">
                         <div className="card-image">

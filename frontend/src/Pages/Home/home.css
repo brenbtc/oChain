@@ -1,3 +1,15 @@
 .homeTitle {
     text-align: center;
 }
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+ a {
+    color: black;
+    text-decoration: none;
+}
+
+
+  

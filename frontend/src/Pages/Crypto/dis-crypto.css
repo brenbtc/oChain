@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+}
+
+.coinImage {
+    max-height: 3vh;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+.Red {
+    color: red;
+}
+
+.Green {
+    color: green;
+}

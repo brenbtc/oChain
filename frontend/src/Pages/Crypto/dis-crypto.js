@@ -42,12 +42,13 @@ function Crypto() {
                                 return (
                                     <tr key={props.id}>
                                         <td>{props.market_cap_rank.toLocaleString()}</td>
-                                        <td>{props.name}</td>
+                                        <td> <img src={props.image} className='coinImage'/> {props.name}</td>
                                         <td>{props.symbol.toUpperCase()}</td>
                                         <td>${props.current_price.toLocaleString()}</td>
                                         <td>${props.total_volume.toLocaleString()}</td>
-                                        <td>${props.price_change_24h.toLocaleString()}</td>
+                                        <td className={props.price_change_24h < 0 ? 'Red' : 'Green'}>${props.price_change_24h.toLocaleString()}</td>
                                     </tr>
+                                    
                                 )
                             })}
                         </tbody>
