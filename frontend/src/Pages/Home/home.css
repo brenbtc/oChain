@@ -1,9 +1,11 @@
 .homeTitle {
     text-align: center;
+    margin-bottom: 10vh;
 }
 .row {
     display: flex;
     justify-content: center;
+    max-width: 150vh;
 }
 
  a {

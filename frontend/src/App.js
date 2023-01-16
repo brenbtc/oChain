@@ -8,6 +8,8 @@ import './App.css';
 import Nav from './components/Nav/nav';
 import Login from './components/Login/login';
 import Signup from './components/Signup/signup';
+import Footer from './components/Footer';
+
 
 
 // Pages \\
@@ -85,6 +87,9 @@ function App() {
 
         </Routes>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

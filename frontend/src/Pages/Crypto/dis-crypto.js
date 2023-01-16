@@ -22,7 +22,7 @@ function Crypto() {
     return (
         <div className='crypto-page'>
             <div className='header'>
-                <h2>Discover Crypto</h2>
+                <h4>DISCOVER CRYPTO</h4>
             </div>
             <div>
                 <table className='centered striped responsive-table'>

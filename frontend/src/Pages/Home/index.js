@@ -14,11 +14,16 @@ function Home() {
  
     return (
         <main className="home-page">
+            <header className='homeTitle'>
+                <h4>DISCOVER THE PERFECT WATCHLIST.</h4>
+                <h4>PLAN YOUR TRADE.</h4>
+                <h4>TRADE YOUR PLAN.</h4>
+            </header>
             <div className="row">
             {cards.map((card) => (
                 <div key={card.id} className="col">
                     <a href={card.link}>
-                    <div className="card">
+                    <div className="card small">
                         <div className="card-image">
                             <img src={card.img} />
                         </div>
