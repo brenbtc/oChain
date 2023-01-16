@@ -15,9 +15,9 @@ function Home() {
     return (
         <main className="home-page">
             <header className='homeTitle'>
-                <h4>DISCOVER THE PERFECT WATCHLIST.</h4>
-                <h4>PLAN YOUR TRADE.</h4>
-                <h4>TRADE YOUR PLAN.</h4>
+                <h4><strong>PLAN YOUR TRADE.</strong></h4>
+                <h4><strong>TRADE YOUR PLAN.</strong></h4>
+                <h4><strong>DISCOVER THE PERFECT WATCHLIST.</strong></h4>
             </header>
             <div className="row">
             {cards.map((card) => (
@@ -27,7 +27,7 @@ function Home() {
                         <div className="card-image">
                             <img src={card.img} />
                         </div>
-                        <span className='homeTitle'><h5>{card.title}</h5></span>
+                        <span className='homeTitle'><h5><strong>{card.title}</strong></h5></span>
                         <div className="card-content">
                             <p>{card.content}</p>
                         </div>

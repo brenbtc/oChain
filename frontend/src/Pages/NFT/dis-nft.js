@@ -6,7 +6,7 @@ function NFT() {
 
     return (
         <div className='nft-page'>
-            <h2>DISCOVER NFTs</h2>
+            <h2><strong>DISCOVER NFTs</strong></h2>
             {/* <div>
             {nfts.map(nft => (
                 <div key={nft.id}>
