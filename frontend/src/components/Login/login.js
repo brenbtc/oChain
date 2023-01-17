@@ -41,23 +41,31 @@ function Login(props) {
 
 
             <form onSubmit={handleSubmit}>
-                <label htmlFor='username'>Username: </label>
-                    <input 
-                    type='text'
-                    name='username'
-                    onChange={handleChange}
-                    value={formState.username}
-                    />
-
-                <label htmlFor='password'>Password:</label>
-                    <input
-                    type='text'
-                    name='password'
-                    onChange={handleChange}
-                    value={formState.password}
-                    />
-
-                <button type='submit'>Login</button>
+                <div className=''>
+                    <label htmlFor='username'>Username: </label>
+                        <input 
+                        type='text'
+                        name='username'
+                        onChange={handleChange}
+                        className='browser-default'
+                        placeholder='Username'
+                        value={formState.username}
+                        />
+                </div>
+                <div>
+                    <label htmlFor='password'>Password:  </label>
+                        <input
+                        type='text'
+                        name='password'
+                        onChange={handleChange}
+                        className='browser-default'
+                        placeholder='Password'
+                        value={formState.password}
+                        />
+                </div>
+                <div>
+                    <button type='submit'>Login</button>
+                </div>
             </form> 
             
         </div>

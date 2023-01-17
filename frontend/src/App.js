@@ -9,6 +9,8 @@ import Nav from './components/Nav/nav';
 import Login from './components/Login/login';
 import Signup from './components/Signup/signup';
 import Footer from './components/Footer';
+import { CenterProvider } from '@center-inc/react'
+
 
 
 
@@ -18,6 +20,7 @@ import About from './Pages/About/about';
 import Crypto from './Pages/Crypto/dis-crypto'
 import NFT from './Pages/NFT/dis-nft'
 import ShowCrypto from './Pages/ShowCrypto/show-crypto'
+import Learn from './Pages/Learn';
 import Watchlist from './Pages/Watchlist/watchlist'
 import Test from './Pages/Test/test';
 
@@ -85,6 +88,10 @@ function App() {
           element={<Test />}
           />
 
+          <Route 
+          path='/learn'
+          element={<Learn />}
+          />
         </Routes>
       </main>
       <footer>

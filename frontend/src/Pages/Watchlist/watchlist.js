@@ -4,10 +4,11 @@ function Watchlist() {
 
 
     return (
-        <div className='watchlist-page'>
-        <h1>MY WATCHLIST</h1>
-        
-        </div>
+        <main className='watchlist-page'>
+            <header className='header'>
+                <h4>MY WATCHLIST</h4>
+            </header>
+        </main>
     )
 }
 

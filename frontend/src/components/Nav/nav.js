@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AppBar, Toolbar } from '@mui/material'
 
 import './nav.css'
 

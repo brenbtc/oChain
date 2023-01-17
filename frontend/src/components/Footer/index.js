@@ -18,16 +18,16 @@ function Footer() {
                     </div>
                     <div className="footer-section">
                         <h6><strong>Newsletter</strong></h6>
-                       <a href='#' className='newsletterbutton'><ion-icon name="arrow-redo-outline"></ion-icon></a> 
+                       <a href='#' className='newsletterbutton'>Subscribe<ion-icon name="arrow-redo-outline"></ion-icon></a> 
                     </div>
                     <div className="footer-section">
                         <h6><strong>Socials</strong></h6>
-                        <a href='#' ><ion-icon name="logo-twitter"></ion-icon></a>
-                        <br />
+                        <a href='#' className='twitter'><ion-icon name="logo-twitter"></ion-icon></a>
+                        {/* <br /> */}
                         <a href='#' ><ion-icon name="logo-instagram"></ion-icon></a>
                         <br />
-                        <a href='#' ><ion-icon name="logo-tiktok"></ion-icon></a>
-                        <br />
+                        <a href='#' className='tiktok'><ion-icon name="logo-tiktok"></ion-icon></a>
+                        {/* <br /> */}
                         <a href='#' ><ion-icon name="logo-youtube"></ion-icon></a>
                     </div>
                 </div>

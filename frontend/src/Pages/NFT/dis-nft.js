@@ -1,25 +1,50 @@
+import { useCollectionSearch,SearchResultType } from '@center-inc/react'
+import { SearchResults } from '@center-inc/react'
+import { CenterProvider } from '@center-inc/react'
+import { Asset } from '@center-inc/react'
+import { useState } from 'react'
 import './dis-nft.css'
 
 function NFT() {
 
-    // const [nfts, setNfts] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('')
+    const { results } = useCollectionSearch({ searchQuery })
+
+
+
 
     return (
-        <div className='nft-page'>
-            <h2><strong>DISCOVER NFTs</strong></h2>
-            {/* <div>
-            {nfts.map(nft => (
-                <div key={nft.id}>
-                    <img src={nft.image_url} alt={nft.name} />
-                    <h6>{nft.collection}</h6>
-                    <h6>{nft.nftid}</h6>
-                    <h6>{nft.price} ETH</h6>
-                    <h6>{nft.floor} ETH</h6>
-                </div>
-            ))} */}
-        {/* </div> */}
-        </div>
+        <CenterProvider>
+
+        <main className='nft-page'>
+            <header>
+                <h4><strong>DISCOVER NFTs</strong></h4>
+            </header>
+            <div>
+                <form>
+                    <input
+                    className='browser-default'
+                    type='search'
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    />                
+                </form>
+            </div>
+            <div>
+                <ul>
+                    {results.map(results => {
+                    <li>{results.name}</li>
+                    })}
+                </ul>
+            </div>
+        </main>
+        </CenterProvider>
+
     )
 }
+
+
+
+
 
 export default NFT

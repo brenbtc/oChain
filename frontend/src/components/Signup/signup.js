@@ -27,34 +27,44 @@ function Signup(props) {
             props.setLoggedIn(true)
             props.setUser(data.user)
         })
-        navigate('/login')
+        navigate('/')
     }
 
     return (
-        <div>
-            <h1>Sign Up</h1>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor='username'>Username</label>
-                    <input 
-                    type='text' 
-                    name='username'
-                    value={formState.username}
-                    onChange={handleChange}
-                    required
-                    />
-
-                    <label>Password</label>
-                    <input 
-                    type='text' 
-                    name='password'
-                    value={formState.password}
-                    onChange={handleChange}
-                    required
-                    />
-
-                    <button type='submit'>Sign up</button>
-                </form>
-        </div>
+        <main className='row'>
+            <div className='col'>
+                <div className='card'>
+                    <div className='card-action'>
+                        <h4 className='signup-title'><strong>SignUp</strong></h4>
+                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <div className='card-content'>
+                            <label htmlFor='username'>Username</label>
+                            <input 
+                            type='text' 
+                            name='username'
+                            value={formState.username}
+                            onChange={handleChange}
+                            className='validate'
+                            required
+                            />
+                        </div>
+                        <div className='card-content'>
+                            <label>Password</label>
+                            <input 
+                            type='text' 
+                            name='password'
+                            value={formState.password}
+                            onChange={handleChange}
+                            className='validate'
+                            required
+                            />
+                        </div>
+                        <button type='submit' className='signup-btn btn waves-effect '>Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </main>
     )
 }
 
