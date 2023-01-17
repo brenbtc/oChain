@@ -36,39 +36,38 @@ function Login(props) {
 
 
     return (
-        <div className='loginContainer'>
-        
-
-
-            <form onSubmit={handleSubmit}>
-                <div className=''>
-                    <label htmlFor='username'>Username: </label>
-                        <input 
-                        type='text'
-                        name='username'
-                        onChange={handleChange}
-                        className='browser-default'
-                        placeholder='Username'
-                        value={formState.username}
-                        />
+        <main className='row'>
+            <div className='col'>
+                <div className='card'>
+                    <div className='card-action'>
+                    <h4 className='login-title'><strong>Login</strong></h4>
+                    </div>
+                        <form onSubmit={handleSubmit}>
+                            <div className='card-content'>
+                                <label htmlFor='username'>Username: </label>
+                                    <input 
+                                    type='text'
+                                    name='username'
+                                    onChange={handleChange}
+                                    className='validate'
+                                    value={formState.username}
+                                    />
+                            </div>
+                            <div className='card-content'>
+                                <label htmlFor='password'>Password:  </label>
+                                    <input
+                                    type='text'
+                                    name='password'
+                                    onChange={handleChange}
+                                    className='validate'
+                                    value={formState.password}
+                                    />
+                            </div>
+                                <button type='submit' className='signup-btn btn waves-effect '>Login</button>
+                        </form> 
                 </div>
-                <div>
-                    <label htmlFor='password'>Password:  </label>
-                        <input
-                        type='text'
-                        name='password'
-                        onChange={handleChange}
-                        className='browser-default'
-                        placeholder='Password'
-                        value={formState.password}
-                        />
-                </div>
-                <div>
-                    <button type='submit'>Login</button>
-                </div>
-            </form> 
-            
-        </div>
+            </div>
+        </main>
     )
 }
 
