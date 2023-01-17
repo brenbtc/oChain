@@ -7,7 +7,7 @@ import './nav.css'
 function Nav(props) {
 
     const navigate = useNavigate();
-    const initialState = [<h1><Link to='/'className='brand-logo' >oChain</Link></h1>]
+    const initialState = []
 
     const handleLogOut = () => {
         localStorage.clear();
@@ -22,10 +22,10 @@ function Nav(props) {
       setNavItems(
         initialState.concat(
           <li>
-            <Link to="/watchlist">Watchlist</Link>
+            <Link to="/watchlist" className='btn-flat'>Watchlist</Link>
           </li>,
           <li key="2">
-            <button onClick={handleLogOut}>
+            <button onClick={handleLogOut} className='btn-flat'>
               Logout
             </button>
           </li>
@@ -35,12 +35,12 @@ function Nav(props) {
       setNavItems(
         initialState.concat([
           <li className="nav-item" key="3">
-            <Link className='nav-link' to="/login">Login</Link>
+            <Link className='nav-link btn-flat' to="/login">Login</Link>
           </li>,
           
         
           <li className="nav-item" key="4">
-            <Link className='nav-link' to="/signup">Signup</Link>
+            <Link className='nav-link btn-flat' to="/signup">Signup</Link>
           </li>,
         ])
       );
@@ -48,11 +48,16 @@ function Nav(props) {
   }, [props.loggedIn])
 
     return (
-        <div className='nav-wrapper'>
-            <ul>
-                {navItems}
-            </ul>
-        </div>
+      <main>
+        <nav>
+          <div className='nav-wrapper'>
+            <h5 className='brand-logo'><Link to='/'className='btn-flat'>oChain</Link></h5>
+              <ul className='right'>
+                  {navItems}
+              </ul>
+          </div>
+        </nav>
+      </main>
     )
 }
 
