@@ -7,13 +7,13 @@ function Notes(props) {
     
     const navigate = useNavigate()
     const [userData, setUserData] =useState({username: ''})
-    const [usersNotes, setUsersNotes] =useeState([])
+    const [usersNotes, setUsersNotes] =useState([])
 
 
-    useEffect(()=> {
-        setUserData(props.currentUser.user)
-        setUsersNotes(props.currentUser.Notes)
-    },[props])
+    // useEffect(()=> {
+    //     setUserData(props.currentUser.user)
+    //     setUsersNotes(props.currentUser.Notes)
+    // },[props])
 
 
     
