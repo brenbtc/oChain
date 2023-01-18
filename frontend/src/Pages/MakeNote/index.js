@@ -1,9 +1,12 @@
 import { useEffect,useState } from "react"
 import { createNote } from "../../utils/api"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
-function Test() {
+function MakeNote() {
 
+
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         title: '',
         body: ''
@@ -16,13 +19,15 @@ function Test() {
     function handleSubmit(event) {
         event.preventDefault()
         createNote(formData)
-    
+        console.log(formData)
+        // navigate('watchlist')
     }
 
     return (
         <div >
-            <h4>My Test</h4>
+            <h4>Create Notes</h4>
             <div>
+
                 <form>
                     <input 
                     name="title"
@@ -50,4 +55,4 @@ function Test() {
     )
 }
 
-export default Test
+export default MakeNote

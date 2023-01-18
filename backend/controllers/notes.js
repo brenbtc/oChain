@@ -16,17 +16,17 @@ function isAuthenticated(req, res, next){
 
 
 // Creates a Note \\
-router.post('/',  async (req, res) => {
-    console.log(req.body)
+router.post('/', isAuthenticated, async (req, res) => {
     const createdNote = await db.Note.create(req.body)
-    const token = req.header.authorization
+    const token = req.headers.authorization
     const decoded = jwt.decode(token, config.jwtSecret)
     createdNote.user = decoded.id
-    console.log(createdNote)
     createdNote.save()
     res.json(createdNote)
 })
-// show all notes/index route 
+
+
+// Index Route \\
 router.get('/', async (req, res) => {
     const allNotes = await db.Note.find({}).populate('user')
     res.json(allNotes)
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
 // Show Note \\
 router.get('/:id', async (req, res) => {
-    const foundNote = await db.Note.findById(req.params.id).populate
+    const foundNote = await db.Note.findById(req.params.id).populate('user')
     res.json(foundNote)
 })
 

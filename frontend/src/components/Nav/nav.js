@@ -24,6 +24,9 @@ function Nav(props) {
           <li key='1'>
             <Link to="/watchlist" className='btn-flat'>Watchlist</Link>
           </li>,
+          <li key='11'>
+          <Link to="/notes" className='btn-flat'>Notes</Link>
+        </li>,
           <li key="2">
             <button onClick={handleLogOut} className='btn-flat'>
               Logout

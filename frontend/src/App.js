@@ -22,7 +22,9 @@ import NFT from './Pages/NFT/dis-nft'
 import ShowCrypto from './Pages/ShowCrypto/show-crypto'
 import Learn from './Pages/Learn';
 import Watchlist from './Pages/Watchlist/watchlist'
-import Test from './Pages/Test/test';
+import MakeNote from './Pages/MakeNote';
+import EditNote from './Pages/EditNote';
+import Notes from './Pages/Notes';
 
 function App() {
 
@@ -82,15 +84,25 @@ function App() {
           element={<Watchlist loggedIn={loggedIn}/>}
           />
           
-
           <Route 
-          path='/test'
-          element={<Test />}
+          path='/make'
+          element={<MakeNote />}
           />
+          
 
           <Route 
           path='/learn'
           element={<Learn />}
+          />
+
+          <Route 
+          path='/edit'
+          element={<EditNote />}
+          />
+
+          <Route 
+          path='/notes'
+          element={<Notes />}
           />
         </Routes>
       </main>

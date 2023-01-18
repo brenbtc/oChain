@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import './watchlist.css'
 
 function Watchlist(props) {
+
     const navigate = useNavigate();
+   
     useEffect(() => {
         if (!props.loggedIn) {
             navigate('/')
@@ -16,6 +17,13 @@ function Watchlist(props) {
             <header className='header'>
                 <h4>MY WATCHLIST</h4>
             </header>
+            <div>
+                Crypto List here...
+            </div>
+            <div>
+                NFT list here...
+            </div>
+
         </main>
     )
 }

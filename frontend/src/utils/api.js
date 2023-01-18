@@ -28,9 +28,17 @@ export async function accountLogin(formData) {
 // Create Note \\
 export async function createNote(formData) {
   const { data } = await axios.post(
-    "http://localhost:5000/note/create",formData, config)
+    "http://localhost:5000/note/",formData, config)
     return data
 }
+
+// Token Show \\
+export async function getToken() {
+  const { data } = await axios.get('http://localhost:5000/user/token', config)
+  return data
+}
+
+
 
 // Show Note \\
 // export async function showNote(){
