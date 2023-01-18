@@ -21,7 +21,7 @@ function Nav(props) {
     if (props.loggedIn) {
       setNavItems(
         initialState.concat(
-          <li>
+          <li key='1'>
             <Link to="/watchlist" className='btn-flat'>Watchlist</Link>
           </li>,
           <li key="2">

@@ -19,16 +19,16 @@ function isAuthenticated(req, res, next){
 router.post('/',  async (req, res) => {
     console.log(req.body)
     const createdNote = await db.Note.create(req.body)
-    // const token = req.header.authorization
-    // const decoded = jwt.decode(token, config.jwtSecret)
-    // createdNote.user = decoded.id
+    const token = req.header.authorization
+    const decoded = jwt.decode(token, config.jwtSecret)
+    createdNote.user = decoded.id
     console.log(createdNote)
     createdNote.save()
     res.json(createdNote)
 })
 // show all notes/index route 
 router.get('/', async (req, res) => {
-    const allyNotes = await db.Note.find({}).populate('user')
+    const allNotes = await db.Note.find({}).populate('user')
     res.json(allNotes)
 })
 

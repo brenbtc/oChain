@@ -49,7 +49,7 @@ function App() {
 
           <Route
            path="/login" 
-           element={ <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} 
+           element={ <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser}/>} 
            />
 
           <Route 
@@ -79,7 +79,7 @@ function App() {
 
           <Route 
           path='/watchlist'
-          element={<Watchlist />}
+          element={<Watchlist loggedIn={loggedIn}/>}
           />
           
 

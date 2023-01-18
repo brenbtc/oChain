@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './watchlist.css'
 
-function Watchlist() {
-
+function Watchlist(props) {
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!props.loggedIn) {
+            navigate('/')
+        }
+    }, [props.loggedIn])
 
     return (
         <main className='watchlist-page'>

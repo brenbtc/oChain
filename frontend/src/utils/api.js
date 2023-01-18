@@ -1,5 +1,11 @@
 import axios from "axios";
 
+const config = {
+  headers: {
+      'Authorization': localStorage.getItem('token')
+  }
+}
+
 // Sign Up \\
 export async function signUp(formData) {
   const { data } = await axios.post(
@@ -18,3 +24,28 @@ export async function accountLogin(formData) {
   return data
 }
 
+
+// Create Note \\
+export async function createNote(formData) {
+  const { data } = await axios.post(
+    "http://localhost:5000/note/create",formData, config)
+    return data
+}
+
+// Show Note \\
+// export async function showNote(){
+//   const { data } = await axios.get()
+//   return data
+// }
+
+
+// Update/Edit Note \\
+// export async function updateNote() {
+//   const { data } = await axios.put()
+//   return data
+// }
+
+// Delete Note \\
+// export async function deleteNote() {
+//   await axios.delete()
+// }
