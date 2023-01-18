@@ -3,11 +3,7 @@ const Schema = mongoose.Schema
 
 const noteSchema = new Schema(
     {
-       noteId: {
-           type: Number,
-           required: true 
-       },
-
+   
        title: {
         type: String,
         required: true
