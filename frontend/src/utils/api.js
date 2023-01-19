@@ -41,10 +41,10 @@ export async function getToken() {
 
 
 // Show Note \\
-// export async function showNote(){
-//   const { data } = await axios.get()
-//   return data
-// }
+export async function showNote(){
+  const { data } = await axios.get()
+  return data
+}
 
 
 // Update/Edit Note \\

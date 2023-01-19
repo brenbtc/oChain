@@ -29,7 +29,7 @@ import Notes from './Pages/Notes';
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(false)
-  const [user, setUser]= useState([])
+  const [user, setUser]= useState({})
 
   useEffect(() => {
     if (localStorage.token) {
@@ -102,7 +102,7 @@ function App() {
 
           <Route 
           path='/notes'
-          element={<Notes />}
+          element={<Notes  setUser={setUser}/>}
           />
         </Routes>
       </main>

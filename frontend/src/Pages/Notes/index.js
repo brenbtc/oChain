@@ -6,21 +6,24 @@ import { getToken } from '../../utils/api';
 function Notes(props) {
     
     const navigate = useNavigate()
-    const [userData, setUserData] =useState({username: ''})
+    const [userData, setUserData] =useState({
+        username: '',
+    })
     const [usersNotes, setUsersNotes] =useState([])
 
 
-    // useEffect(()=> {
-    //     setUserData(props.currentUser.user)
-    //     setUsersNotes(props.currentUser.Notes)
-    // },[props])
+    useEffect(()=> {
+        setUserData(props.userData)
+        setUsersNotes(props.userData)
+        console.log(props.userData)
+    },[])
 
 
     
     return (
         <main className='learn-page'>
             <header className='header'>
-                <h4><strong>My Notes</strong></h4>
+                <h4><strong>'s Notes</strong></h4>
             </header>
             <section>
 
