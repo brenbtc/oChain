@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { showNote } from '../../utils/api';
+import { showNote, deleteNote } from '../../utils/api';
+
 
 import './index.css'
 
-function Notes() {
+function Notes(props) {
     const [notes, setNotes] = useState([]);
-     // get chat
-  async function getNotes() {
+    async function getNotes() {
     await showNote().then((data) => setNotes(data));
   }
 
@@ -15,14 +15,14 @@ function Notes() {
     getNotes();
   }, []);
 
-
-console.log()
+  const delNote = async (note) => {
     
+   }
 
     return (
         <main className='notes'>
             <header className='header'>
-                <h4><strong>Notes</strong></h4>
+                <h4><strong>{props.user.username}'s Notes</strong></h4>
             </header>
             <div className='row'>
             {notes.map((note, i) => (
@@ -30,8 +30,16 @@ console.log()
                     <div key={i} className='card-panel'>
                             <span className='card-title'><h6><strong>{note.title}</strong></h6></span>
                             <p>{note.body}</p>
-                        <button className='btn-flat yellow-text text-darken-4'>Edit</button>
-                        <button className='btn-flat red-text text-accent-4'>Del</button>
+                        <button
+                         className='btn-flat yellow-text text-darken-4'>
+                            Edit
+                        </button>
+                        <button 
+                        className='btn-flat red-text text-accent-4'
+                        onClick={()=>delNote(note)}
+                        >
+                            Del
+                        </button>
                     </div>
                 </div>
 

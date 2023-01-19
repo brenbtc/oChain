@@ -35,6 +35,7 @@ function MakeNote() {
                     value={formData.title}
                     onChange={handleChange}
                     className='browser-default'
+                    placeholder="Note Title"
                     required
                     />
 
@@ -44,6 +45,7 @@ function MakeNote() {
                     value={formData.body}
                     onChange={handleChange}
                     className='browser-default'
+                    placeholder="Note Body"
                     required
                     />
 

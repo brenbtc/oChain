@@ -54,6 +54,6 @@ export async function showNote(){
 // }
 
 // Delete Note \\
-// export async function deleteNote() {
-//   await axios.delete()
-// }
+export async function deleteNote() {
+  await axios.delete()
+}
