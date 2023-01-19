@@ -1,36 +1,45 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getToken } from '../../utils/api';
+import { showNote } from '../../utils/api';
+
+import './index.css'
+
+function Notes() {
+    const [notes, setNotes] = useState([]);
+     // get chat
+  async function getNotes() {
+    await showNote().then((data) => setNotes(data));
+  }
+
+  useEffect(() => {
+    getNotes();
+  }, []);
 
 
-function Notes(props) {
+console.log()
     
-    const navigate = useNavigate()
-    const [userData, setUserData] =useState({
-        username: '',
-    })
-    const [usersNotes, setUsersNotes] =useState([])
 
-
-    useEffect(()=> {
-        setUserData(props.userData)
-        setUsersNotes(props.userData)
-        console.log(props.userData)
-    },[])
-
-
-    
     return (
-        <main className='learn-page'>
+        <main className='notes'>
             <header className='header'>
-                <h4><strong>'s Notes</strong></h4>
+                <h4><strong>Notes</strong></h4>
             </header>
-            <section>
+            <div className='row'>
+            {notes.map((note, i) => (
+                <div className='col s12 m5'>
+                    <div key={i} className='card-panel'>
+                            <span className='card-title'><h6><strong>{note.title}</strong></h6></span>
+                            <p>{note.body}</p>
+                        <button className='btn-flat yellow-text text-darken-4'>Edit</button>
+                        <button className='btn-flat red-text text-accent-4'>Del</button>
+                    </div>
+                </div>
 
-
-                <button><a href='/make'>Create Note</a></button>
-            </section>
-        </main>
+        ))}
+        <br/>
+        </div>
+        <button><a href='/make'>CreateNote</a></button>
+    </main>
     )
 }
 

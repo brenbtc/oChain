@@ -23,7 +23,7 @@ function Watchlist(props) {
             <div>
                 NFT list here...
             </div>
-
+           <button> <a href='/make'>CreateNote</a></button>
         </main>
     )
 }

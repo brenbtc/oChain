@@ -27,9 +27,12 @@ router.post('/login', async (req, res) => {
     if(req.body.password === foundUser.password){
         const payload = {id: foundUser._id}
         const token = jwt.encode(payload, config.jwtSecret)
+        const userNotes = await db.Note.find({ user:foundUser._id })
+
         res.json({
             user: foundUser,
             token: token,
+            notes: userNotes
         })
     } else {
         sendStatus(401)
@@ -43,6 +46,7 @@ router.post('/login', async (req, res) => {
 router.get('/token', async (req, res) => {
     const token = req.headers.authorization
     const decoded = jwt.decode(token, config.jwtSecret)
+    console.log(decoded)
     const foundUser = await db.User.findById(decoded._id)
     const userNotes = await db.Note.find({ user:foundUser._id })
     res.json({

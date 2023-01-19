@@ -102,7 +102,7 @@ function App() {
 
           <Route 
           path='/notes'
-          element={<Notes  setUser={setUser}/>}
+          element={<Notes  loggedIn={loggedIn} user={user}/>}
           />
         </Routes>
       </main>

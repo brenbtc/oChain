@@ -24,7 +24,6 @@ export async function accountLogin(formData) {
   return data
 }
 
-
 // Create Note \\
 export async function createNote(formData) {
   const { data } = await axios.post(
@@ -42,9 +41,10 @@ export async function getToken() {
 
 // Show Note \\
 export async function showNote(){
-  const { data } = await axios.get()
+  const { data } = await axios.get("http://localhost:5000/note")
   return data
 }
+
 
 
 // Update/Edit Note \\

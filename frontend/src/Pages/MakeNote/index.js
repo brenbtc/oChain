@@ -20,7 +20,7 @@ function MakeNote() {
         event.preventDefault()
         createNote(formData)
         console.log(formData)
-        // navigate('watchlist')
+        navigate('/notes')
     }
 
     return (
