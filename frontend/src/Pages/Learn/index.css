@@ -1,0 +1,18 @@
+.large{
+    width: 120vh;
+}
+
+.content {
+    text-align: center;
+}
+
+.cardslist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.col {
+    margin: 0 auto;
+}
