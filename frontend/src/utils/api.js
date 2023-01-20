@@ -48,12 +48,13 @@ export async function showNote(){
 
 
 // Update/Edit Note \\
-export async function updateNote() {
-  const { data } = await axios.put("http://localhost:5000/note/:id")
+export async function updateNote(note) {
+  const { data } = await axios.put(`http://localhost:5000/note/${note._id}`, note, config)
   return data
 }
 
 // Delete Note \\
-export async function deleteNote() {
-  await axios.delete("http://localhost:5000/note/:id")
+export async function deleteNote(_id) 
+{
+  await axios.delete(`http://localhost:5000/note/${_id}`, config)
 }

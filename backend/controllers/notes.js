@@ -40,18 +40,11 @@ router.get('/:id', async (req, res) => {
 
 // Update Note\\
 router.put('/:id', isAuthenticated, async (req, res) => {
-    const foundNote = await db.Note.findById(req.params.id)
-    const token = req.header.authorization
-    const decoded = jwt.decode(token, config.jwtSecret)
-    if(foundNote.user == decoded.id){
-        const updatedNote = await db.Note.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true }
-        )
-        res.json(updatedNote)
-}
+    const updatedNote = await db.Note.findByIdAndUpdate(req.body.id
+        , req.body, {new: true})
+    res.json(updatedNote)
 })
+
 
 // Delete Note \\
 router.delete('/:id', isAuthenticated, async (req, res) => {
