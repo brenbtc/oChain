@@ -19,7 +19,8 @@ function Learn() {
     return (
         <main className='learn-page'>
             <header className='header'>
-                <h4><strong>Learn about Blockchain</strong></h4>
+                <h2><strong>Learn</strong></h2>
+                <h6>LEARN AND NAVIGATE THROUGH THE RAPIDLY EVOLVING FUTURE</h6>
             </header>
             <div className="cardslist">
             {cards.map((card) => (
