@@ -23,7 +23,6 @@ import ShowCrypto from './Pages/ShowCrypto/show-crypto'
 import Learn from './Pages/Learn';
 import Watchlist from './Pages/Watchlist/watchlist'
 import MakeNote from './Pages/MakeNote';
-import EditNote from './Pages/EditNote';
 import Notes from './Pages/Notes';
 
 function App() {
@@ -95,10 +94,6 @@ function App() {
           element={<Learn />}
           />
 
-          <Route 
-          path='/edit'
-          element={<EditNote />}
-          />
 
           <Route 
           path='/notes'

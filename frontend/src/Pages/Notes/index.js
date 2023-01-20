@@ -106,21 +106,21 @@ function Notes() {
                     }}
                   >
                     <button
-                      className="btn btn-primary"
+                      className="btn "
                       onClick={(e) => handleDelete(note)}
                     >
                       Delete
                     </button>
                     {edit ? (
                       <button
-                        className="btn btn-primary"
+                        className="btn "
                         onClick={(e) => handleUpdate(editnote)}
                       >
                         Update
                       </button>
                     ) : (
                       <button
-                        className="btn btn-primary"
+                        className="btn "
                         onClick={(e) => {
                           setEdit(true);
                           setEditNote({
@@ -139,8 +139,8 @@ function Notes() {
             </div>
           ))}
         </div>
-        <button>
-          <a href="/make">CreateNote</a>
+        <button className='create'>
+          <a href="/make" className='btn'>Create Note</a>
         </button>
       </main>
     );

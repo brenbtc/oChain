@@ -3,6 +3,8 @@ import { createNote } from "../../utils/api"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
+import './index.css'
+
 function MakeNote() {
 
 
@@ -24,35 +26,39 @@ function MakeNote() {
     }
 
     return (
-        <div >
-            <h4>Create Notes</h4>
-            <div>
-
-                <form>
-                    <input 
-                    name="title"
-                    type='text'
-                    value={formData.title}
-                    onChange={handleChange}
-                    className='browser-default'
-                    placeholder="Note Title"
-                    required
-                    />
-
-                    <input 
-                    name="body"
-                    type='text'
-                    value={formData.body}
-                    onChange={handleChange}
-                    className='browser-default'
-                    placeholder="Note Body"
-                    required
-                    />
-
-                    <button onClick={handleSubmit}>Create Note</button>
-                </form>
+        <main className="row">
+            <div  className="col">
+                <div className="card">
+                    <div className="card-action"></div>
+                    <h4 className="title"><strong>Create Note</strong></h4>
+                            <form>
+                            <div className="card-content">
+                                <input 
+                                name="title"
+                                type='text'
+                                value={formData.title}
+                                onChange={handleChange}
+                                className='validate'
+                                placeholder="Title"
+                                required
+                                />
+                            </div>
+                            <div className="card-content">
+                                <input 
+                                name="body"
+                                type='text'
+                                value={formData.body}
+                                onChange={handleChange}
+                                className='validate'
+                                placeholder="Note"
+                                required
+                                />
+                            </div>
+                                <button onClick={handleSubmit} className="btn signup-btn">Create Note</button>
+                            </form>
+                </div>
             </div>
-        </div>
+        </main>
         
     )
 }
