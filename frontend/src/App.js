@@ -18,7 +18,8 @@ import { CenterProvider } from '@center-inc/react'
 import Home from "./Pages/Home";
 import About from './Pages/About/about';
 import Crypto from './Pages/Crypto/dis-crypto'
-import NFT from './Pages/NFT/dis-nft'
+
+import Disnft from './Pages/NFT/Disnft';
 import ShowCrypto from './Pages/ShowCrypto/show-crypto'
 import Learn from './Pages/Learn';
 import Watchlist from './Pages/Watchlist/watchlist'
@@ -69,9 +70,10 @@ function App() {
           />
 
           <Route 
-          path='/nft'
-          element={<NFT />}
+          path="/nft" 
+          element={<Disnft />} 
           />
+
 
           <Route 
           path='/crypto/crypto'
