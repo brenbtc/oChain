@@ -52,7 +52,7 @@ function Signup(props) {
                         <div className='card-content'>
                             <label>Password</label>
                             <input 
-                            type='text' 
+                            type='password' 
                             name='password'
                             value={formState.password}
                             onChange={handleChange}

@@ -64,7 +64,7 @@ function Login(props) {
                             <div className='card-content'>
                                 <label htmlFor='password'>Password:  </label>
                                     <input
-                                    type='text'
+                                    type='password'
                                     name='password'
                                     onChange={handleChange}
                                     className='validate'
