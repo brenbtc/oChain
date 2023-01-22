@@ -10,7 +10,7 @@ const config = {
 export async function signUp(formData) {
   const { data } = await axios.post(
     "http://localhost:5000/user/signup",
-    formData
+    formData,
   )
   return data;
 }
@@ -19,7 +19,8 @@ export async function signUp(formData) {
 export async function accountLogin(formData) {
   const { data } = await axios.post(
     "http://localhost:5000/user/login",
-    formData
+    formData,
+    config
   )
   return data
 }

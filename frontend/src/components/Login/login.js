@@ -1,6 +1,3 @@
-
-
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {accountLogin } from '../../utils/api'
@@ -23,14 +20,25 @@ function Login(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        accountLogin(formState)
-        .then((data) => {
-            localStorage.token = data.token;
-            props.setLoggedIn(true)
-            props.setUser(data.user)
-            console.log(data.user)
-        })
-        navigate('/')
+        try {
+            accountLogin(formState)
+            .then((res) => {
+                console.log(res)
+                if(res.status!==401){
+              
+                        localStorage.token = res.token;
+                        props.setLoggedIn(true);
+                        props.setUser(res.user);
+                        
+                    navigate('/')
+                }
+            }
+            )
+        } catch (error) {
+            console.log(error)
+        }
+ 
+        
     }
    
 
